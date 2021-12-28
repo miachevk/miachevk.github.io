@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+   <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
 <head>   
 <title>Main page</title>
 </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+  <button class="g-recaptcha" 
+        data-sitekey="6LdcfNMdAAAAAImI3LvLGW1KVdUUhEkX38ZsD3RZ" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
   <script async src="https://widget.13chats.com/assets/loader.js" data-chats-widget-id="07546f86-4c5c-4161-a3d8-172e119df51a"></script>
+  
 </body>
 </html>
