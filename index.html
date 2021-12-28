@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-   <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdcfNMdAAAAAImI3LvLGW1KVdUUhEkX38ZsD3RZ"></script>
+ <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+              console.log(token);
+          });
+        });
+      }
+  </script>
 <head>   
 <title>Main page</title>
 </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
-  <button class="g-recaptcha" 
-        data-sitekey="6LdcfNMdAAAAAImI3LvLGW1KVdUUhEkX38ZsD3RZ" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+  <button class="g-recaptcha">Submit</button>
   
 </body>
 </html>
