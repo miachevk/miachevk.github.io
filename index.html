@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <script src="https://www.google.com/recaptcha/api.js?render=6LdcfNMdAAAAAImI3LvLGW1KVdUUhEkX38ZsD3RZ"></script>
- <script>
-      function onClick(e) {
-        e.preventDefault();
+<script>
+      function test(e) {
         grecaptcha.ready(function() {
           grecaptcha.execute('6LdcfNMdAAAAAImI3LvLGW1KVdUUhEkX38ZsD3RZ', {action: 'submit'}).then(function(token) {
               console.log(token);
@@ -11,13 +10,13 @@
         });
       }
   </script>
-<head>   
-<title>Main page</title>
+<head>
+  <title>Main page</title>
 </head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
-  <button class="g-recaptcha">Submit</button>
-  
+<button onclick="test()" class="g-recaptcha">Submit</button>
+
 </body>
 </html>
